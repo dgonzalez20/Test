@@ -19,6 +19,7 @@ class Libro extends Migration
             $table->String('nombre');
             $table->bigIncrements('categoria_id')->unsigned();
             $table->timestamps();
+            $table->foreign('categoria_id')->references('id')->on('categorias');
 
         });
     }
